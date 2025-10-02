@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.container div{
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+    background-color: aqua;
+    padding: 2rem;
+}

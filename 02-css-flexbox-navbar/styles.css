@@ -1,0 +1,29 @@
+*{
+    font-family: helvetica;
+    margin: 0;
+    color: #eaeaea;
+}
+
+.navbar{
+display: flex;
+justify-content:space-between;
+align-items: center;
+background-color: #333;
+padding: 1rem 2rem;
+}
+
+.logo{
+    
+}
+
+.list-item a{
+    text-decoration: none;
+}
+
+.list-item{
+    list-style: none;
+}
+
+@media (max-width : 768px){
+    
+}
