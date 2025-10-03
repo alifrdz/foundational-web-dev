@@ -1,22 +1,31 @@
-const taskInput = document.getElementById ('task-input');
+const taskInput = document.getElementById('task-input');
 const addButton = document.getElementById('add-button');
 const taskList = document.getElementById('task-list');
 
-function toDoList (){
-    const newTodoListText = taskInput.value; //buat si user bisa isi 
-    
-    if (newTodoListText === ''){
-        //pengecekan ada isi/value nya engga dari user
+function addTaskToDoList() {
+    const newTodoListText = taskInput.value;
+    if (newTodoListText === '') {
         alert('Tugas tidak boleh kosongan');
-        return; 
+        return;
     }
 
-    const newLi = document.createElement('Li');
+    const newLi = document.createElement('li');
     newLi.textContent = newTodoListText;
-    taskList.append(newLi);
 
-    taskInput.value = ('');
-    console.log('ini berhasil nambah tugas di todolist');
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Hapus';
+    deleteButton.classList.add('delete-button');
+    newLi.append(deleteButton);
+
+    taskList.append(newLi);
+    taskInput.value = '';
 }
 
-addButton.addEventListener ('click' , toDoList);
+addButton.addEventListener('click', addTaskToDoList);
+
+taskList.addEventListener('click', function(event) {
+    if (event.target.matches('.delete-button')) {
+        event.target.closest('li').remove();
+    }
+});
+
