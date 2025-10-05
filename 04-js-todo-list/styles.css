@@ -1,0 +1,14 @@
+* {
+    font-family: helvetica;
+}
+
+.new-task{
+    border: 1px;
+    background-color: #E2EBFA;
+    border-radius: 5px;
+    color: blue;
+    width: fit-content;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
