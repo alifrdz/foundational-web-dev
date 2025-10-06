@@ -8,13 +8,19 @@
 </head>
 
 <body>
-    <div></div>
-    <h3>Today's Task</h3>
-    <p>Monday, 5 October </p>
-    <p class="new-task">+ New Task</p>
-    <input type="text" name="" id="task-input">
-    <button id="add-button">Send</button>
-    <ul id="task-list"></ul>
-    <script src="main.js"></script>
+    <div class="todolist-app">
+        <h3>Today's Task</h3>
+        <p>Monday, 5 October </p>
+        <button id="new-task">+ New Task</button>
+        
+            <div class="input-wrapper hidden">
+                <input type="text" name="" id="task-input">
+                <button id="add-button">Send</button>
+            </div>
+
+
+        <ul id="task-list"></ul>
+        <script src="main.js"></script>        
+    </div>
 </body>
 </html>
