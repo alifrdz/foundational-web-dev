@@ -65,21 +65,16 @@ function saveTask(){
 
 // Loads tasks from localStorage when the page is opened.
 function loadTasks() {
-    console.log('1. Memulai fungsi loadTasks...');
 
     const savedTasks = localStorage.getItem('task');
-    console.log('2. Data mentah dari localStorage:', savedTasks);
 
     if (savedTasks === null) {
-        console.log('3. Tidak ada data tersimpan, fungsi berhenti.');
         return;
     }
 
     const tasksArray = JSON.parse(savedTasks);
-    console.log('4. Data setelah di-parse (jadi Array):', tasksArray);
 
     tasksArray.forEach(function(taskText) {
-        console.log('5. Membuat elemen untuk tugas:', taskText);
         
         const newLi = document.createElement('li');
         newLi.textContent = taskText;
@@ -92,7 +87,6 @@ function loadTasks() {
         taskList.append(newLi);
     });
 
-    console.log('6. Selesai memuat semua tugas.');
 }
 
 loadTasks();
